@@ -3,8 +3,41 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gd Stutter Calculator</title>
+    <title>GD Stutter Calculator</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        text-align: center
+      }
+
+      #fb-input {
+        flex-direction: horizontal;
+      }
+    </style>
   </head>
   <body>
+    <h1>GD Stutter Calculator</h1><br>
+    <h3>Please input your refresh rate here</h3>
+    <input id="rr" type="number" placeholder="Ex: 60, 144, 240, etc..."><br>
+    <h3>Please input your framerate here</h3>
+    <input id="fr" type="number" placeholder="Ex: 60, 144, 240, etc..."><br>
+
+    <h4>Are you using physics bypass?</h4>
+    <p>If you are unsure or play vanilla, click no. <br>Physics bypass as of the end of 2025 is hardly allowed on any leaderboard ruleset.<br>
+    This is only really useful if you are creating/botting impossible levels or playing on the challenge list.</p>
+    <div id="fb-input">
+      <input type="radio" id="yesOption" name="pb" value="no" checked>
+      <label for="yesOption">No</label>
+      <input type="radio" id="noOption" name="pb" value="yes">
+      <label for="noOption">Yes</label>
+    </div>
+    <div id="pb-values">
+      <h3>Input your physics bypass value</h3>
+      <p>(Usually this value is 360 if the mod doesn't let you specify the number)</p>
+      <input type="number" placeholder="360, 480, etc..">
+    </div>
   </body>
 </html>
