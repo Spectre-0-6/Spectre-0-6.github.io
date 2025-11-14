@@ -73,8 +73,8 @@ function calcStutterVal(){
   const physicsDesync = calculateStutter(physicsRate, frRate);
   
   // Get LCM for good framerate xdddd
-  const physicsFrameLcm = lcm(physicsRate, frRate);
-  const idealFramerate = physicsFrameLcm;
+  const physicsHzLcm = lcm(physicsRate, rrRate);
+  const idealFramerate = physicsHzLcm;
   
   // Updating or creating results blud!!!!!
   let resultsDiv = document.getElementById('results');
