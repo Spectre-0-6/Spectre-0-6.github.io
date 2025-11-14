@@ -7,33 +7,40 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <h1>GD Stutter Calculator</h1><br>
-    <h3>Please input your refresh rate here</h3>
-    <input id="rr" type="number" placeholder="Ex: 60, 144, 240, etc..."><br>
-    <h3>Please input your framerate here</h3>
-    <input id="fr" type="number" placeholder="Ex: 60, 144, 240, etc..."><br>
-
-    <h4>Are you using physics bypass?</h4>
-    <p>If you are unsure or play vanilla, click no. <br>Physics bypass as of the end of 2025 is hardly allowed on any leaderboard ruleset.<br>
-    This is only really useful if you are creating/botting impossible levels or playing on the challenge list.</p>
-    <div id="fb-input">
-      <input type="radio" id="yesOption" name="pb" value="no" checked>
-      <label for="yesOption">No</label>
-      <input type="radio" id="noOption" name="pb" value="yes">
-      <label for="noOption">Yes</label>
-    </div>
-    <div id="pb-values">
-      <h3>Input your physics bypass value</h3>
-      <p>(Usually this value is 360 if the mod doesn't let you specify the number)</p>
-      <input id="pr" type="number" placeholder="360, 480, etc..">
+    <h1>GD Stutter Calculator</h1>
+    <h3>- SpectreNoodle</h3>
+    <div class="input-section">
+      <div class="input-group">
+        <h3>Refresh Rate</h3>
+        <input id="rr" type="number" placeholder="Ex: 60, 144, 240">
+      </div>
+      
+      <div class="input-group">
+        <h3>Framerate <p>(This is assuming you don't use regular tps bypass. There are much better options if you do, but for now, dont consider it.)</p></h3>
+        <input id="fr" type="number" placeholder="Ex: 60, 144, 240">
+      </div>
+      
+      <div class="input-group">
+        <h4>Physics Bypass</h4>
+        <p>If unsure or playing vanilla, click no.</p>
+        <div id="fb-input">
+          <input type="radio" name="pb" value="no" checked>
+          <label for="yesOption">No</label>
+          <input type="radio" name="pb" value="yes">
+          <label for="noOption">Yes</label>
+        </div>
+        <div id="pb-values" style="display:none;">
+          <h4>Physics Bypass Rate</h4>
+          <input id="pr" type="number" placeholder="360, 480, etc..">
+        </div>
+      </div>
     </div>
 
     <div id="run">
       <h3>Run Calculator</h3>
-      <input id="startB" type="button">
+      <button id="startB">Calculate Issues</button>
     </div>
 
-    
     <script src="script.js"></script>
   </body>
 </html>
